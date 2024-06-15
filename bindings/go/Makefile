@@ -7,6 +7,7 @@ all: gen_const
 
 gen_const:
 	cd .. && python3 const_generator.py go
+	go fmt
 
 test: all
 	cd unicorn && LD_LIBRARY_PATH=../../../ DYLD_LIBRARY_PATH=../../../ go test
